@@ -2,26 +2,219 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox 2</title>
+    <title>flexbox2</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-black: #191A23;
+            --color-lime: #B9FF66;
+            --color-gray: #666666;
+            --color-light-gray: #F3F3F3;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--color-black);
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px 60px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-icon {
+            width: 28px;
+            height: 28px;
+            background-color: var(--color-black);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 18px;
+            font-weight: 400;
+            transition: opacity 0.2s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        .button1 {
+            text-decoration: none;
+            color: var(--color-black);
+            border: 1px solid var(--color-black);
+            padding: 14px 30px;
+            border-radius: 12px;
+            font-weight: 400;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .button1:hover {
+            background-color: var(--color-black);
+            color: #ffffff;
+        }
+
+        main {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin: auto 0;
+            padding: 60px 0;
+        }
+
+        .paragraph {
+            flex: 1.1;
+            max-width: 540px;
+        }
+
+        .paragraph h1 {
+            font-size: 56px;
+            line-height: 1.15;
+            font-weight: 700;
+            margin-bottom: 28px;
+            letter-spacing: -1px;
+        }
+
+        .paragraph p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--color-gray);
+            margin-bottom: 40px;
+            max-width: 480px;
+            ;
+        }
+
+        .button2 {
+            background-color: var(--color-black);
+            color: #ffffff;
+            border: none;
+            padding: 20px 35px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .button2:hover {
+            background-color: #292a32;
+        }
+
+        .megaphone-image-container {
+            display: flex;
+            flex: 0.9;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .megaphone-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .brands {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .brand-logo {
+            height: 30px;
+            object-fit: contain;
+            filter: grayscale(100%);
+        }
+
+        footer {
+            padding: 40px 0 10px 0;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container1">
-        <img src="images/icon.png" width="10%">
-    </div>
-</body>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=New+Rocker&family=Space+Grotesk:wght@300..700&display=swap');
 
-    .container1 {
-        display: flex;
-        margin: 0 auto;
-        justify-content: space-between;
-        background-color: bisque;
-        padding: 10px;
-    }
-</style>
+    <header>
+        <div class="logo">
+            <img class="icon" src="images/icon.png">
+            <span>Positivus</span>
+        </div>
+
+        <div class="nav-container">
+            <nav>
+                <a href="#">About us</a>
+                <a href="#">Services</a>
+                <a href="#">Use Cases</a>
+                <a href="#">Pricing</a>
+                <a href="#">Blog</a>
+            </nav>
+            <a href="#" class="button1">Request a quote</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="paragraph">
+            <h1>Navigating the digital landscape for success</h1>
+            <p>Our digital marketing agency helps businesses grow and succeed online through a range of services
+                including SEO, PPC, social media marketing, and content creation.</p>
+            <button class="button2">Book a consultation</button>
+        </div>
+
+        <div class="megaphone-image-container">
+            <img class="megaphone-image" src="images/Illustration.png" alt="megaphone">
+        </div>
+    </main>
+
+    <footer>
+        <div class="brands">
+            <img class="brand-logo" src="images/amazon.png" alt="Amazon Logo">
+            <img class="brand-logo" src="images/dribble.png" alt="Dribbble Logo">
+            <img class="brand-logo" src="images/hubspot.png" alt="HubSpot Logo">
+            <img class="brand-logo" src="images/notion.png" alt="Notion Logo">
+            <img class="brand-logo" src="images/netflix.png" alt="Netflix Logo">
+            <img class="brand-logo" src="images/zoom.png" alt="Zoom Logo">
+        </div>
+    </footer>
+
+</body>
 
 </html>
