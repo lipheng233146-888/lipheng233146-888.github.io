@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <img src=" images/logo.jpg">
+        </div>
+    </div>
+
+    <div class="container">
+        <div>Home</div>
+        <div>Services</div>
+        <div>Work</div>
+        <div>Project Details</div>
+        <div>Contact</div>
+    </div>
+
+    <div class="container2">
+        <div>
+            <img src="images/phone.png" width="20%">
+        </div>
+        <div>555-123-4567</div>
+        <div>
+            <button>Contact</button>
+        </div>
+    </div>
+    </div>
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=New+Rocker&family=Space+Grotesk:wght@300..700&display=swap');
+
+    /* Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #fcfcfc;
+    }
+
+    .header {
+        width: 100%;
+        background-color: #ffffff;
+        padding: 15px 0;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .logo img {
+        width: 15%;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    /* Actions Area (Phone & Button) */
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .phone-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: #1a1a1a;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .phone-link i {
+        color: #555555;
+        font-size: 13px;
+    }
+
+    /* Contact Button */
+    .btn-contact {
+        display: inline-block;
+        background-color: #ff5a22;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 22px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: background-color 0.2s ease;
+    }
+
+    .btn-contact:hover {
+        background-color: #e04814;
+    }
+
+    /* Responsive Breakdown for Mobile */
+    @media (max-width: 768px) {
+        .main-nav {
+            display: none;
+            /* Hides menu links on smaller screens */
+        }
+
+        .phone-link {
+            display: none;
+            /* Optional: hides phone number on small mobile views */
+        }
+    }
+</style>
+
+</html>
