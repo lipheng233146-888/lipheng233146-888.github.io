@@ -5,124 +5,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menu</title>
+    <style>
+        body {
+            margin: 5px 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            position: relative;
+        }
+
+        .logo img {
+            width: 50%;
+            height: auto;
+            display: flex;
+        }
+
+        .hamburger {
+            width: 32px 32px;
+            display: none;
+        }
+
+        .hamburger img {
+            width: 32px;
+            display: block;
+        }
+
+        .container2 {
+            display: flex;
+            gap: 30px;
+            font-family: "Inter" sans-serif;
+            align-items: center;
+        }
+
+        .phone {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .phone img {
+            width: 20px;
+            height: auto;
+        }
+
+        .phone .text {
+            font-family: sans-serif;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .contact {
+            border-radius: 10px;
+            padding: 10px 15px;
+            background-color: orangered;
+            border: none;
+            color: white;
+            font-family: "Inter", sans-serif;
+            font-weight: 600;
+        }
+
+        .container3 {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=New+Rocker&family=Space+Grotesk:wght@300..700&display=swap');
+
+        @media screen and (max-width: 780px) {
+            .container {
+                padding: 15px 30px;
+            }
+
+            .contact {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .container2 {
+                display: none;
+                flex-direction: column;
+            }
+
+        }
+
+        @media screen and (max-width: 580px) {
+            .container3 {
+                display: none;
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="header">
-        <div class="logo">
-            <img src=" images/logo.jpg">
-        </div>
-    </div>
-
     <div class="container">
-        <div>Home</div>
-        <div>Services</div>
-        <div>Work</div>
-        <div>Project Details</div>
-        <div>Contact</div>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Company Logo">
+        </div>
+
+        <div class="container2">
+            <div>Home</div>
+            <div>Services</div>
+            <div>Work</div>
+            <div>Project Details</div>
+            <div>Contact</div>
+        </div>
+
+        <div class="container3">
+            <div class="phone">
+                <img src="images/phone.png" alt="Phone Icon">
+                <div class="text">555-123-4567</div>
+            </div>
+        </div>
+
+        <button class="contact">Contact</button>
+
+        <div class="hamburger">
+            <img src="images/hamburger.jpg" alt="hamburger">
+        </div>
     </div>
 
-    <div class="container2">
-        <div>
-            <img src="images/phone.png" width="20%">
-        </div>
-        <div>555-123-4567</div>
-        <div>
-            <button>Contact</button>
-        </div>
-    </div>
-    </div>
 </body>
-
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=New+Rocker&family=Space+Grotesk:wght@300..700&display=swap');
-
-    /* Reset and Base Styles */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: 'Inter', sans-serif;
-        background-color: #fcfcfc;
-    }
-
-    .header {
-        width: 100%;
-        background-color: #ffffff;
-        padding: 15px 0;
-    }
-
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .logo img {
-        width: 15%;
-    }
-
-    .container {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-    }
-
-    /* Actions Area (Phone & Button) */
-    .header-actions {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .phone-link {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        text-decoration: none;
-        color: #1a1a1a;
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    .phone-link i {
-        color: #555555;
-        font-size: 13px;
-    }
-
-    /* Contact Button */
-    .btn-contact {
-        display: inline-block;
-        background-color: #ff5a22;
-        color: #ffffff;
-        text-decoration: none;
-        padding: 10px 22px;
-        border-radius: 6px;
-        font-size: 14px;
-        font-weight: 600;
-        transition: background-color 0.2s ease;
-    }
-
-    .btn-contact:hover {
-        background-color: #e04814;
-    }
-
-    /* Responsive Breakdown for Mobile */
-    @media (max-width: 768px) {
-        .main-nav {
-            display: none;
-            /* Hides menu links on smaller screens */
-        }
-
-        .phone-link {
-            display: none;
-            /* Optional: hides phone number on small mobile views */
-        }
-    }
-</style>
 
 </html>
