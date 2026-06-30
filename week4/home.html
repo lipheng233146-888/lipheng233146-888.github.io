@@ -6,31 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-    </style>
 </head>
 
 <body>
 
-
-    <div class="navbar">
-        <div class="logo">
-            <img src="images/icon.png" alt="icon">
-            <span>Positivus</span>
-        </div>
-
-        <div class="nav-links">
-            <a href="#">About us</a>
-            <a href="#">Services</a>
-            <a href="#">Use Cases</a>
-            <a href="#">Pricing</a>
-            <a href="#">Blog</a>
-            <button class="btn-secondary">Request a quote</button>
-        </div>
-    </div>
-
     <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/icon.png" alt="icon">
+                <span>Positivus</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#">About us</a>
+                <a href="#">Services</a>
+                <a href="#">Use Cases</a>
+                <a href="#">Pricing</a>
+                <a href="#">Blog</a>
+                <button class="btn-secondary">Request a quote</button>
+            </div>
+        </div>
+
         <div class="parent">
             <div class="child">
                 <h1>Navigating the digital landscape for success</h1>
@@ -63,6 +59,124 @@
             </p>
         </div>
     </div>
+
+    <div class="cards-section">
+        <div class="card white">
+            <div class="header-link">
+                <div class="heading">
+                    <span class="text green">Search engine</span>
+                    <span class="text green">optimization</span>
+                </div>
+                <a href="#" class="link">
+                    <img src="images/arrow.png" alt="Learn more" class="icon">
+                    <span>Learn more</span>
+                </a>
+            </div>
+            <div class="illustration">
+                <img src="images/element.png" alt="SEO Illustration">
+            </div>
+        </div>
+
+        <!-- Card 2: Pay-per-click advertising (Green Theme) -->
+        <div class="card green">
+            <div class="header-link">
+                <div class="heading">
+                    <span class="text white">Pay-per-click</span>
+                    <span class="text white">advertising</span>
+                </div>
+                <a href="#" class="link">
+                    <img src="images/arrow.png" alt="Learn more" class="icon">
+                    <span>Learn more</span>
+                </a>
+            </div>
+            <div class="illustration">
+                <img src="images/element2.png" alt="PPC Illustration">
+            </div>
+        </div>
+
+        <!-- Card 3: Social Media Marketing (Dark Theme) -->
+        <div class="card dark">
+            <div class="header-link">
+                <div class="heading">
+                    <span class="text white">Social Media</span>
+                    <span class="text white">Marketing</span>
+                </div>
+                <a href="#" class="link">
+                    <img src="images/arrow-white.png" alt="Learn more" class="icon">
+                    <span>Learn more</span>
+                </a>
+            </div>
+            <div class="illustration">
+                <img src="images/element3.png" alt="Social Media Illustration">
+            </div>
+        </div>
+
+        <!-- Card 4: Email Marketing (White Theme) -->
+        <div class="card white">
+            <div class="header-link">
+                <div class="heading">
+                    <span class="text green">Email</span>
+                    <span class="text green">Marketing</span>
+                </div>
+                <a href="#" class="link">
+                    <img src="images/arrow.png" alt="Learn more" class="icon">
+                    <span>Learn more</span>
+                </a>
+            </div>
+            <div class="illustration">
+                <img src="images/element4.png" alt="Email Marketing Illustration">
+            </div>
+        </div>
+
+        <!-- Card 5: Content Creation (Green Theme) -->
+        <div class="card green">
+            <div class="header-link">
+                <div class="heading">
+                    <span class="text white">Content</span>
+                    <span class="text white">Creation</span>
+                </div>
+                <a href="#" class="link">
+                    <img src="images/arrow.png" alt="Learn more" class="icon">
+                    <span>Learn more</span>
+                </a>
+            </div>
+            <div class="illustration">
+                <img src="images/element5.png" alt="Content Creation Illustration">
+            </div>
+        </div>
+
+        <!-- Card 6: Analytics and Reporting (Dark Theme) -->
+        <div class="card dark">
+            <div class="header-link">
+                <div class="heading">
+                    <span class="text green">Analytics and</span>
+                    <span class="text green">Reporting</span>
+                </div>
+                <a href="#" class="link">
+                    <img src="images/arrow-white.png" alt="Learn more" class="icon">
+                    <span>Learn more</span>
+                </a>
+            </div>
+            <div class="illustration">
+                <img src="images/element6.png" alt="Analytics Illustration">
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="banner">
+            <div class="content">
+                <h3>Let's make things happen</h3>
+                <p>Contact us today to learn more about how our digital marketing services can help your business grow
+                    and
+                    succeed online.</p>
+                <button class="btn-primary">Get your free proposal</button>
+            </div>
+            <div class="cta-illustration">
+                <img src="images/cta-element.png" alt="CTA Graphic">
+            </div>
+        </div>
+    </div>
 </body>
 
 <style>
@@ -71,8 +185,6 @@
         background-color: white;
         padding: 0 60px;
         font-family: "Space Grotesk", sans-serif;
-        display: flex;
-        flex-direction: column;
         align-items: center;
     }
 
@@ -236,6 +348,159 @@
         line-height: 1.5;
         margin: 0;
     }
+
+    .card {
+        display: flex;
+        width: 100%;
+        max-width: 40%;
+        flex-shrink: 0;
+        height: 210px;
+        padding: 50px;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 45px;
+        border: 1px solid #191a23;
+        box-shadow: 0px 5px 0px #191a23;
+    }
+
+    .white {
+        background-color: #f3f3f3;
+    }
+
+    .green {
+        background-color: #B9FF66;
+    }
+
+    .dark {
+        background-color: #191a23;
+    }
+
+    .white .link,
+    .green .link {
+        color: #191a23;
+    }
+
+    .dark .link {
+        color: white;
+    }
+
+    .cards-section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 40px;
+        width: 100%;
+        max-width: 1440px;
+        padding: 40px 80px 100px 80px;
+        margin: 0 auto;
+    }
+
+    .header-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .heading {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        margin: 0;
+    }
+
+    .link img .icon {
+        width: 41px;
+        height: 41px;
+        object-fit: contain;
+    }
+
+    .text {
+        display: inline-block;
+        font-size: 26px;
+        font-weight: 500;
+        padding: 2px 8px;
+        border-radius: 7px;
+        width: fit-content;
+    }
+
+    .link {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-decoration: none;
+        color: #191a23;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 0;
+    }
+
+    .illustration {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 210px;
+        height: 100%;
+    }
+
+    .illustration img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .banner {
+        background-color: #f3f3f3;
+        border-radius: 45px;
+        align-items: center;
+        gap: 275px;
+        padding: 0 60px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 100px 0;
+    }
+
+    .content {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    .content h3 {
+        font-size: 30px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    .content p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .cta-illustration {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cta-illustration img {
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .wrapper {
+        display: flex;
+        width: 1440px;
+        padding: 0 100px;
+        align-items: center;
+    }
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 </style>
 
 </html>
