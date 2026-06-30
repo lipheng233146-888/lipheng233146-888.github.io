@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+
+<body>
+    <h1>Resize the browser window to see the effect!</h1>
+
+    <p>The media query is applied if the media type is screen, and the viewport width is 580px or more.</p>
+
+    <div class="container">
+        <div class="child">1</div>
+        <div class="child">2</div>
+    </div>
+    <div class="container2">
+        <img src="https://static.wikia.nocookie.net/headhuntershorrorhouse/images/7/76/Valak.jpg/revision/latest?cb=20240422230312"
+            alt="image">
+    </div>
+</body>
+
+<style>
+    body {
+        background-color: pink;
+    }
+
+    img {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .container2 {
+        display: flex;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .child {
+        width: 50%;
+    }
+
+    @media screen and (max-width: 580px) {
+        body {
+            background-color: lightgreen;
+        }
+
+        h1 {
+            display: none;
+        }
+
+        p {
+            font-size: 26px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 1024px;
+        }
+
+        .container {
+            flex-direction: column;
+        }
+
+        .container2 {
+            flex-direction: column;
+        }
+
+        .child {
+            width: 100%;
+        }
+    }
+</style>
+
+</html>
