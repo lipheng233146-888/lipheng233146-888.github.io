@@ -13,7 +13,7 @@
     <p>The media query is applied if the media type is screen, and the viewport width is 580px or more.</p>
 
     <div class="container">
-        <div class="child">Hello</div>
+        <div class="child">Hello!</div>
         <div class="child">Check me out!</div>
         <div class="text">Suprise!!!</div>
     </div>
@@ -25,7 +25,7 @@
 
 <style>
     body {
-        background-color: pink;
+        background-color: white;
     }
 
     img {
@@ -34,6 +34,8 @@
 
     .container {
         display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
     }
 
     .container2 {
@@ -51,27 +53,35 @@
         display: none;
     }
 
+    @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=New+Rocker&family=Space+Grotesk:wght@300..700&display=swap');
+
     @media screen and (max-width: 580px) {
         body {
-            background-color: lightgreen;
+            background-color: black;
         }
 
         h1 {
             display: none;
+            font-family: 'Creepster';
+            color: darkred;
         }
 
         p {
             font-size: 26px;
+            font-family: 'Creepster';
+            color: darkred;
         }
 
         img {
             display: block;
             width: 100%;
-            max-width: 1024px;
+            max-width: 500px;
         }
 
         .container {
             flex-direction: column;
+            font-family: 'Creepster';
+            color: darkred;
         }
 
         .container2 {
@@ -84,7 +94,7 @@
 
         .text {
             display: block;
-            width: 100%;
+            width: 150%;
             padding: 10px;
         }
     }
