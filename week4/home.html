@@ -4,381 +4,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Positivus - Interactive Base</title>
+    <title>home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+    </style>
 </head>
 
 <body>
 
-    <div class="header">
+
+    <div class="navbar">
         <div class="logo">
-            <img class="icon" src="images/icon.png" alt="Positivus Icon">
+            <img src="images/icon.png" alt="icon">
             <span>Positivus</span>
         </div>
 
-        <div class="nav-container">
-            <div class="container">
-                <!-- Converted static texts to proper accessible navigation hyperlinks -->
-                <a href="#about" class="nav-link">About us</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#use-cases" class="nav-link">Use Cases</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#blog" class="nav-link">Blog</a>
-            </div>
-            <!-- Converted request container to a fully accessible button -->
-            <button class="quote-btn">Request a quote</button>
+        <div class="nav-links">
+            <a href="#">About us</a>
+            <a href="#">Services</a>
+            <a href="#">Use Cases</a>
+            <a href="#">Pricing</a>
+            <a href="#">Blog</a>
+            <button class="btn-secondary">Request a quote</button>
         </div>
     </div>
 
-    <div class="section">
-        <div class="paragraph">
-            <h1>Navigating the digital landscape for success</h1>
-
-            <!-- Megaphone nested directly between h1 and p elements -->
-            <div class="megaphone-wrapper">
-                <img class="megaphone-image" src="images/Illustration.png" alt="megaphone illustration layout">
+    <div class="container">
+        <div class="parent">
+            <div class="child">
+                <h1>Navigating the digital landscape for success</h1>
+                <p>Our digital marketing agency helps businesses grow and succeed online through a range of services
+                    including SEO, PPC, social media marketing, and content creation.</p>
+                <button class="btn-primary">Book a consultation</button>
             </div>
 
-            <p>Our digital marketing agency helps businesses grow and succeed online through a range of services
-                including SEO, PPC, social media marketing, and content creation.</p>
-
-            <!-- Converted booking wrapper to a native functional button -->
-            <button class="book-btn">Book a consultation</button>
+            <div class="child-image">
+                <img src="images/Illustration.png" alt="Digital Landscape Illustration">
+            </div>
         </div>
     </div>
 
-    <div class="container2">
-        <div class="brands">
-            <img class="brand-logo" src="images/amazon.png" alt="amazon Logo">
-            <img class="brand-logo" src="images/dribble.png" alt="dribble Logo">
-            <img class="brand-logo" src="images/hubspot.png" alt="hubSpot Logo">
-            <img class="brand-logo" src="images/notion.png" alt="notion Logo">
-            <img class="brand-logo" src="images/netflix.png" alt="netflix Logo">
-            <img class="brand-logo" src="images/zoom.png" alt="zoom Logo">
-        </div>
+    <div class="brand">
+        <img src="images/amazon.png" alt="Amazon">
+        <img src="images/dribble.png" alt="Dribbble">
+        <img src="images/hubspot.png" alt="HubSpot">
+        <img src="images/notion.png" alt="Notion">
+        <img src="images/netflix.png" alt="Netflix">
+        <img src="images/zoom.png" alt="Zoom">
     </div>
 
-    <!-- FIXED: SERVICES BLOCK STRUCTURE -->
-    <div class="service">
-        <div class="container3">
-            <div>Services</div>
-        </div>
-        <p class="service-desc">At our digital marketing agency, we offer a range of services to help businesses grow
-            and succeed online. These services include:</p>
-    </div>
-
-    <div class="container4">
-        <div class="bar">
-            <div>Search Engine Optimization</div>
-        </div>
+    <div class="services-header">
+        <h2 class="services-title">Services</h2>
+        <p class="services-description">
+            At our digital marketing agency, we offer a range of services to
+            help businesses grow and succeed online. These services include:
+        </p>
     </div>
 </body>
 
 <style>
     body {
-        font-family: 'Space Grotesk', sans-serif;
         color: black;
-        background-color: #ffffff;
-        min-height: 100vh;
+        background-color: white;
+        padding: 0 60px;
+        font-family: "Space Grotesk", sans-serif;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        padding: 40px 100px;
-        max-width: 1440px;
-        margin: 0 auto;
+        align-items: center;
     }
 
-    /* --- HEADER SYSTEM --- */
-    .header {
+    .container {
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 60px;
+    }
+
+    .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 0;
+        padding: 60px 0;
+        width: 100%;
     }
 
     .logo {
         display: flex;
         align-items: center;
-        gap: 12px;
-        font-size: 28px;
+        gap: 12.92px;
+    }
+
+    .logo img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .logo span {
+        font-size: 24px;
         font-weight: 700;
-        letter-spacing: -0.5px;
     }
 
-    .icon {
-        width: 28px;
-        height: 28px;
-    }
-
-    .nav-container {
+    .nav-links {
         display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    .parent {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
         align-items: center;
         gap: 40px;
+        padding: 60px 0;
     }
 
-    .container {
+    .child {
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1;
+        max-width: 540px;
+    }
+
+    .child h1 {
+        font-family: "Space grotesk";
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+    }
+
+    .child p {
+        font-family: "Space grotesk";
+        font-size: 20px;
+        line-height: 1.5;
+        margin: 0 0 35px 0;
+    }
+
+    .child-image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 60px;
+    }
+
+    .child-image img {
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+    }
+
+    /* Buttons */
+    .btn-primary {
+        background-color: #191a23;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 12px;
+        border: none;
+        font-size: 16px;
+    }
+
+    .btn-secondary {
+        background-color: transparent;
+        color: black;
+        padding: 12px 24px;
+        border-radius: 12px;
+        border: 1px solid black;
+        font-size: 16px;
+    }
+
+    .brand {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 100px;
+        flex-wrap: wrap;
         gap: 30px;
     }
 
-    .bar div {
-        border-radius: 45px;
-        background-color: #f3f3f3;
-        padding: 50px;
-        justify-content: space-between;
-        width: 600px;
-        height: 312px;
-        border: 1px solid#191a23;
-        box-shadow: 0px 10px #191a23;
-    }
-
-    .bar {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        padding: 80px 0 40px 0;
-        width: 100%;
-    }
-
-    /* Standard Interactive Navigation Underline States */
-    .nav-link {
-        font-size: 18px;
-        text-decoration: none;
-        color: black;
-        position: relative;
-        transition: color 0.2s ease;
-    }
-
-    .nav-link:hover {
-        color: #B9FF66;
-        /* Changes text hue to match brand accents */
-    }
-
-    /* Secondary Request Quote Button Styles */
-    .quote-btn {
-        background-color: transparent;
-        color: black;
-        border: 1px solid black;
-        padding: 16px 32px;
-        border-radius: 14px;
-        font-size: 18px;
-        font-family: inherit;
-        font-weight: 400;
-        cursor: pointer;
-        transition: background-color 0.2s ease, transform 0.1s ease;
-    }
-
-    .quote-btn:hover {
-        background-color: #f5f5f5;
-    }
-
-    .quote-btn:active {
-        transform: scale(0.97);
-        /* Mimics structural compression click physics */
-    }
-
-    /* --- HERO FLEX SYSTEM --- */
-    .section {
-        display: flex;
-        align-items: center;
-        margin: auto 0;
-        padding: 60px 0;
-        width: 100%;
-    }
-
-    .paragraph {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        align-items: center;
-        gap: 40px;
-        width: 100%;
-    }
-
-    .paragraph h1 {
-        grid-column: 1;
-        font-size: 56px;
-        line-height: 1.15;
-        font-weight: 700;
-        letter-spacing: -1px;
-    }
-
-    .paragraph p {
-        grid-column: 1;
-        font-size: 18px;
-        line-height: 1.6;
-        max-width: 440px;
-    }
-
-    /* --- FIXED: SERVICES LAYOUT STYLE MATRIX --- */
-    .service {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        padding: 80px 0 40px 0;
-        width: 100%;
-    }
-
-    .service div {
-        font-size: 25px;
-        font-weight: 600;
-        background-color: #B9FF66;
-        /* Accent color maps strictly to the text label */
-        padding: 5px 15px;
-        border-radius: 7px;
-        display: inline-block;
-    }
-
-    .service-desc {
-        max-width: 580px;
-        font-size: 18px;
-        line-height: 1.5;
-    }
-
-    /* Primary Filled Booking Consultation Button Styles */
-    .book-btn {
-        grid-column: 1;
-        background-color: black;
-        color: #ffffff;
-        border: none;
-        padding: 20px 35px;
-        border-radius: 14px;
-        font-size: 18px;
-        font-family: inherit;
-        font-weight: 400;
-        display: inline-block;
-        justify-self: start;
-        cursor: pointer;
-        transition: background-color 0.2s ease, transform 0.1s ease;
-    }
-
-    .book-btn:hover {
-        background-color: #2b2c39;
-        /* Lightens slightly on interaction */
-    }
-
-    .book-btn:active {
-        transform: scale(0.97);
-    }
-
-    .megaphone-wrapper {
-        grid-column: 2;
-        grid-row: 1 / span 3;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        width: 100%;
-    }
-
-    .megaphone-image {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-        object-fit: contain;
-    }
-
-    /* --- BRANDS BAR --- */
-    .container2 {
-        padding: 60px 0 20px 0;
-        width: 100%;
-    }
-
-    .brands {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .brand-logo {
+    .brand img {
         height: 30px;
         object-fit: contain;
         filter: grayscale(100%);
     }
 
-    /* --- RESPONSIVE LAYOUT SYSTEMS --- */
-    @media screen and (max-width: 1024px) {
-        body {
-            padding: 30px 40px;
-        }
-
-        .paragraph h1 {
-            font-size: 44px;
-        }
+    .services-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
     }
 
-    @media screen and (max-width: 430px) {
-        .nav-container {
-            display: none;
-        }
+    .services-title {
+        background-color: #B9FF66;
+        color: #000000;
+        padding: 0 7px;
+        border-radius: 7px;
+        font-weight: 500;
+        font-size: 40px;
+        margin: 0;
+    }
 
-        body {
-            padding: 20px 20px;
-        }
-
-        .section {
-            padding: 20px 0;
-        }
-
-        .paragraph {
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0;
-        }
-
-        .paragraph h1 {
-            font-size: 36px;
-            line-height: 1.2;
-            margin-bottom: 25px;
-        }
-
-        .megaphone-wrapper {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin-bottom: 25px;
-        }
-
-        .megaphone-image {
-            max-width: 290px;
-        }
-
-        .paragraph p {
-            font-size: 16px;
-            margin-bottom: 25px;
-            max-width: 100%;
-        }
-
-        .book-btn {
-            display: block;
-            text-align: center;
-            width: 100%;
-        }
-
-        .brands {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 30px 0;
-        }
-
-        .brand-logo {
-            width: 48%;
-            height: 24px;
-            object-fit: contain;
-        }
-
-        /* Responsive Configuration for small phone screens */
-        .service {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 20px;
-            padding: 40px 0;
-        }
-
-        .service h3 {
-            font-size: 36px;
-        }
+    .services-description {
+        max-width: 580px;
+        color: #000000;
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0;
     }
 </style>
 
