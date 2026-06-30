@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positivus - Interactive Base</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <img class="icon" src="images/icon.png" alt="Positivus Icon">
+            <span>Positivus</span>
+        </div>
+
+        <div class="nav-container">
+            <div class="container">
+                <!-- Converted static texts to proper accessible navigation hyperlinks -->
+                <a href="#about" class="nav-link">About us</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#use-cases" class="nav-link">Use Cases</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#blog" class="nav-link">Blog</a>
+            </div>
+            <!-- Converted request container to a fully accessible button -->
+            <button class="quote-btn">Request a quote</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="paragraph">
+            <h1>Navigating the digital landscape for success</h1>
+
+            <!-- Megaphone nested directly between h1 and p elements -->
+            <div class="megaphone-wrapper">
+                <img class="megaphone-image" src="images/Illustration.png" alt="megaphone illustration layout">
+            </div>
+
+            <p>Our digital marketing agency helps businesses grow and succeed online through a range of services
+                including SEO, PPC, social media marketing, and content creation.</p>
+
+            <!-- Converted booking wrapper to a native functional button -->
+            <button class="book-btn">Book a consultation</button>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="brands">
+            <img class="brand-logo" src="images/amazon.png" alt="amazon Logo">
+            <img class="brand-logo" src="images/dribble.png" alt="dribble Logo">
+            <img class="brand-logo" src="images/hubspot.png" alt="hubSpot Logo">
+            <img class="brand-logo" src="images/notion.png" alt="notion Logo">
+            <img class="brand-logo" src="images/netflix.png" alt="netflix Logo">
+            <img class="brand-logo" src="images/zoom.png" alt="zoom Logo">
+        </div>
+    </div>
+
+    <!-- FIXED: SERVICES BLOCK STRUCTURE -->
+    <div class="service">
+        <div class="container3">
+            <div>Services</div>
+        </div>
+        <p class="service-desc">At our digital marketing agency, we offer a range of services to help businesses grow
+            and succeed online. These services include:</p>
+    </div>
+
+    <div class="container4">
+        <div class="bar">
+            <div>Search Engine Optimization</div>
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        font-family: 'Space Grotesk', sans-serif;
+        color: black;
+        background-color: #ffffff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px 100px;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    /* --- HEADER SYSTEM --- */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+
+    .icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .nav-container {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .container {
+        display: flex;
+        gap: 30px;
+    }
+
+    .bar div {
+        border-radius: 45px;
+        background-color: #f3f3f3;
+        padding: 50px;
+        justify-content: space-between;
+        width: 600px;
+        height: 312px;
+        border: 1px solid#191a23;
+        box-shadow: 0px 10px #191a23;
+    }
+
+    .bar {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 80px 0 40px 0;
+        width: 100%;
+    }
+
+    /* Standard Interactive Navigation Underline States */
+    .nav-link {
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
+        position: relative;
+        transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+        color: #B9FF66;
+        /* Changes text hue to match brand accents */
+    }
+
+    /* Secondary Request Quote Button Styles */
+    .quote-btn {
+        background-color: transparent;
+        color: black;
+        border: 1px solid black;
+        padding: 16px 32px;
+        border-radius: 14px;
+        font-size: 18px;
+        font-family: inherit;
+        font-weight: 400;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .quote-btn:hover {
+        background-color: #f5f5f5;
+    }
+
+    .quote-btn:active {
+        transform: scale(0.97);
+        /* Mimics structural compression click physics */
+    }
+
+    /* --- HERO FLEX SYSTEM --- */
+    .section {
+        display: flex;
+        align-items: center;
+        margin: auto 0;
+        padding: 60px 0;
+        width: 100%;
+    }
+
+    .paragraph {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+    }
+
+    .paragraph h1 {
+        grid-column: 1;
+        font-size: 56px;
+        line-height: 1.15;
+        font-weight: 700;
+        letter-spacing: -1px;
+    }
+
+    .paragraph p {
+        grid-column: 1;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 440px;
+    }
+
+    /* --- FIXED: SERVICES LAYOUT STYLE MATRIX --- */
+    .service {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 80px 0 40px 0;
+        width: 100%;
+    }
+
+    .service div {
+        font-size: 25px;
+        font-weight: 600;
+        background-color: #B9FF66;
+        /* Accent color maps strictly to the text label */
+        padding: 5px 15px;
+        border-radius: 7px;
+        display: inline-block;
+    }
+
+    .service-desc {
+        max-width: 580px;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    /* Primary Filled Booking Consultation Button Styles */
+    .book-btn {
+        grid-column: 1;
+        background-color: black;
+        color: #ffffff;
+        border: none;
+        padding: 20px 35px;
+        border-radius: 14px;
+        font-size: 18px;
+        font-family: inherit;
+        font-weight: 400;
+        display: inline-block;
+        justify-self: start;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .book-btn:hover {
+        background-color: #2b2c39;
+        /* Lightens slightly on interaction */
+    }
+
+    .book-btn:active {
+        transform: scale(0.97);
+    }
+
+    .megaphone-wrapper {
+        grid-column: 2;
+        grid-row: 1 / span 3;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+    }
+
+    .megaphone-image {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* --- BRANDS BAR --- */
+    .container2 {
+        padding: 60px 0 20px 0;
+        width: 100%;
+    }
+
+    .brands {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .brand-logo {
+        height: 30px;
+        object-fit: contain;
+        filter: grayscale(100%);
+    }
+
+    /* --- RESPONSIVE LAYOUT SYSTEMS --- */
+    @media screen and (max-width: 1024px) {
+        body {
+            padding: 30px 40px;
+        }
+
+        .paragraph h1 {
+            font-size: 44px;
+        }
+    }
+
+    @media screen and (max-width: 430px) {
+        .nav-container {
+            display: none;
+        }
+
+        body {
+            padding: 20px 20px;
+        }
+
+        .section {
+            padding: 20px 0;
+        }
+
+        .paragraph {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+        }
+
+        .paragraph h1 {
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .megaphone-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .megaphone-image {
+            max-width: 290px;
+        }
+
+        .paragraph p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            max-width: 100%;
+        }
+
+        .book-btn {
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+
+        .brands {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px 0;
+        }
+
+        .brand-logo {
+            width: 48%;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        /* Responsive Configuration for small phone screens */
+        .service {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 40px 0;
+        }
+
+        .service h3 {
+            font-size: 36px;
+        }
+    }
+</style>
+
+</html>
