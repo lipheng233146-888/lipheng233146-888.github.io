@@ -54,12 +54,14 @@
         <img src="images/zoom.png" alt="Zoom">
     </div>
 
-    <div class="services-header">
-        <h2 class="services-title">Services</h2>
-        <p class="services-description">
-            At our digital marketing agency, we offer a range of services to
-            help businesses grow and succeed online. These services include:
-        </p>
+    <div class="services-section">
+        <div class="services-header">
+            <h2 class="services-title">Services</h2>
+            <p class="services-description">
+                At our digital marketing agency, we offer a range of services to help businesses grow and succeed
+                online. These services include:
+            </p>
+        </div>
     </div>
 </body>
 
@@ -139,7 +141,7 @@
     }
 
     .child h1 {
-        font-family: "Space grotesk";
+        font-family: "Space Grotesk";
         font-size: 60px;
         font-style: normal;
         font-weight: 500;
@@ -148,7 +150,7 @@
     }
 
     .child p {
-        font-family: "Space grotesk";
+        font-family: "Space Grotesk";
         font-size: 20px;
         line-height: 1.5;
         margin: 0 0 35px 0;
@@ -175,6 +177,7 @@
         border-radius: 12px;
         border: none;
         font-size: 16px;
+        cursor: pointer;
     }
 
     .btn-secondary {
@@ -184,6 +187,7 @@
         border-radius: 12px;
         border: 1px solid black;
         font-size: 16px;
+        cursor: pointer;
     }
 
     .brand {
@@ -191,7 +195,7 @@
         width: 100%;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 0 100px;
+        padding: 100px 0;
         flex-wrap: wrap;
         gap: 30px;
     }
@@ -202,11 +206,17 @@
         filter: grayscale(100%);
     }
 
+    .services-section {
+        width: 100%;
+        max-width: 1440px;
+        padding: 0 60px;
+    }
+
     .services-header {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 40px;
+        padding: 100px 0px;
     }
 
     .services-title {
