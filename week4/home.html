@@ -41,14 +41,16 @@
         </div>
     </div>
 
-    <div class="brand container">
-        <div class="brand-logo">
-            <img src="images/amazon.png" alt="Amazon">
-            <img src="images/dribble.png" alt="Dribbble">
-            <img src="images/hubspot.png" alt="HubSpot">
-            <img src="images/notion.png" alt="Notion">
-            <img src="images/netflix.png" alt="Netflix">
-            <img src="images/zoom.png" alt="Zoom">
+    <div class="brand">
+        <div class="brand container">
+            <div class="brand-logo">
+                <img src="images/amazon.png" alt="Amazon">
+                <img src="images/dribble.png" alt="Dribbble">
+                <img src="images/hubspot.png" alt="HubSpot">
+                <img src="images/notion.png" alt="Notion">
+                <img src="images/netflix.png" alt="Netflix">
+                <img src="images/zoom.png" alt="Zoom">
+            </div>
         </div>
     </div>
 
@@ -152,7 +154,7 @@
                     <div class="header-link">
                         <div class="heading">
                             <span class="text green">Analytics and</span>
-                            <span class="text green">Reporting</span>
+                            <span class="text green">Tracking</span>
                         </div>
                         <a href="#" class="link">
                             <img src="images/arrow-white.png" alt="Learn more" class="icon">
@@ -185,6 +187,8 @@
 </body>
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
     body {
         color: black;
         background-color: white;
@@ -221,6 +225,8 @@
     .logo span {
         font-size: 32px;
         font-weight: 700;
+        letter-spacing: -1px;
+        white-space: nowrap;
     }
 
     .nav-links {
@@ -234,18 +240,26 @@
         color: black;
         font-size: 20px;
         font-weight: 400;
+        transition: color 0.2s ease, text-decoration 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        color: #B9FF66;
+        text-decoration: underline;
     }
 
     .parent {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         gap: 40px;
         padding: 60px 0;
     }
 
     .child {
-        flex: 1;
+        flex: 1 1 500px;
+        /* Flex-grow, flex-shrink, and a solid baseline width */
         max-width: 530px;
         display: flex;
         flex-direction: column;
@@ -269,11 +283,12 @@
     .child-image {
         flex: 1;
         display: flex;
+        max-width: 600px;
+        width: 100%;
         justify-content: flex-end;
     }
 
     .child-image img {
-        max-width: 600px;
         width: 100%;
         height: auto;
         object-fit: contain;
@@ -319,6 +334,7 @@
     .brand {
         padding: 40px 0;
         margin-bottom: 60px;
+        width: 100%;
     }
 
     .brand-logo {
@@ -327,6 +343,8 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 30px;
+        max-width: 1280px;
+        margin: 0 auto;
     }
 
     .brand-logo img {
@@ -347,35 +365,25 @@
         align-items: center;
         gap: 40px;
         justify-content: flex-start;
-        width: 100px;
+        width: 100%;
         margin-bottom: 80px;
     }
 
     .services-title {
         background-color: #B9FF66;
+        color: #191a23;
         padding: 0 10px;
         border-radius: 7px;
         font-weight: 600;
         font-size: 40px;
         flex-shrink: 0;
-        white-space: nowrap;
     }
 
     .services-description {
-        max-width: 580px;
         font-size: 18px;
         line-height: 1.5;
-        color: #191a23
-    }
-
-    .card {
-        display: flex;
-        padding: 50px;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 45px;
-        border: 1px solid #191a23;
-        box-shadow: 0px 5px 0px #191a23;
+        color: #191a23;
+        max-width: 580px;
     }
 
     .white {
@@ -395,15 +403,33 @@
         color: #191a23;
     }
 
-    .dark .link {
+    .card.dark .link {
         color: white;
+    }
+
+    .card .link:hover {
+        text-decoration: underline;
+    }
+
+    .card {
+        display: flex;
+        padding: 50px;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 45px;
+        border: 1px solid #191a23;
+        box-shadow: 0px 5px 0px #191a23;
+        width: 600px;
+        box-sizing: border-box;
+        /* Ensures padding and border are included in the width */
     }
 
     .cards-section {
         display: flex;
+        align-items: flex-start;
         flex-wrap: wrap;
         gap: 40px;
-        width: 100%;
+        justify-content: flex-start;
     }
 
     .header-link {
@@ -411,11 +437,13 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
+        gap: 93px;
     }
 
     .heading {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
     }
 
     .card .link .icon {
@@ -430,6 +458,7 @@
         padding: 2px 8px;
         border-radius: 7px;
         width: fit-content;
+        white-space: nowrap;
     }
 
     .card .link {
@@ -446,14 +475,14 @@
         justify-content: center;
         align-items: center;
         width: 210px;
+        max-width: 35%;
+        flex-shrink: 0;
     }
 
     .card .illustration img {
         width: 100%;
         height: auto;
         object-fit: contain;
-        /* Keeps exact 100% width; will never shrink */
-        flex-shrink: 0;
     }
 
     .banner {
@@ -510,11 +539,22 @@
 
         .navbar {
             flex-direction: column;
-            gap: 20px;
-            padding: 30px 0;
+            gap: 24px;
+            padding: 24px 0;
+            text-align: center;
         }
 
-        .parent {
+        .logo span {
+            font-size: 28px;
+        }
+
+        .nav-links {
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .nav-links a .parent {
             flex-direction: column;
             padding: 30px 0;
             text-align: center;
@@ -529,35 +569,16 @@
             font-size: 16px;
         }
 
-        .service-header {
+        .services-header {
             flex-direction: column;
             align-items: flex-start;
             gap: 20px;
         }
 
-        .service-title {
+        .services-title {
             font-size: 32px;
         }
-
-        .cards-section {
-            gap: 20px;
-        }
-
-        .card {
-            flex: 1 1 100%;
-            flex-direction: column;
-            gap: 30px;
-            padding: 30px 24px;
-            border-radius: 30px;
-        }
-
-        .card .illustration {
-            max-width: 100%;
-            width: 100%;
-        }
     }
-
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 </style>
 
 </html>
