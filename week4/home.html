@@ -419,14 +419,16 @@
         border-radius: 45px;
         border: 1px solid #191a23;
         box-shadow: 0px 5px 0px #191a23;
-        width: 600px;
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        width: calc(50% - 20px);
+        /* Flex-grow, flex-shrink, and a solid baseline width */
         box-sizing: border-box;
-        /* Ensures padding and border are included in the width */
     }
 
     .cards-section {
         display: flex;
-        align-items: flex-start;
+        align-items: stretch;
         flex-wrap: wrap;
         gap: 40px;
         justify-content: flex-start;
@@ -437,7 +439,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 93px;
+        gap: 40px;
     }
 
     .heading {
@@ -449,6 +451,8 @@
     .card .link .icon {
         width: 41px;
         height: 41px;
+        object-fit: contain;
+        flex-shrink: 0;
     }
 
     .text {
@@ -475,7 +479,7 @@
         justify-content: center;
         align-items: center;
         width: 210px;
-        max-width: 35%;
+        max-width: 45%;
         flex-shrink: 0;
     }
 
@@ -489,22 +493,28 @@
         background-color: #f3f3f3;
         border-radius: 45px;
         align-items: center;
+        justify-content: space-between;
         padding: 60px;
         display: flex;
-        justify-content: space-between;
-        overflow: hidden;
+        width: 100%;
         /*The element keeps its original space in the document layout. Surrounding elements do not move or shift to fill any gap.*/
+        max-width: 1280px;
+        margin: 0 auto;
         position: relative;
     }
 
     .content {
-        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 0 1 500px;
     }
 
     .content h3 {
         font-size: 30px;
-        font-weight: 500;
-        margin-bottom: 15px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        width: 100%;
     }
 
     .content p {
@@ -515,26 +525,38 @@
 
     .cta-illustration {
         position: absolute;
-        width: 360px;
-        right: 60px;
         top: 50%;
-        /*Moves the element UP by 20% of its own height */
+        right: 60px;
         transform: translateY(-50%);
+        width: 360px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
 
     .cta-illustration img {
-        width: 100%;
+        position: absolute;
+        max-height: 135%;
+        top: 50%;
+        bottom: 50%;
+        transform: translateY(-50%) scale(1.15);
+        width: 135%;
         height: auto;
         object-fit: contain;
     }
 
     .wrapper {
-        margin-bottom: 100px;
+        display: flex;
+        padding: 0 20px;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 80px;
     }
 
     @media screen and (max-width: 430px) {
         body {
-            padding: 0 20px;
+            padding: 0 15px;
         }
 
         .navbar {
@@ -554,14 +576,24 @@
             width: 100%;
         }
 
-        .nav-links a .parent {
+        .nav-links a {
+            width: 100%;
+        }
+
+        .parent {
             flex-direction: column;
             padding: 30px 0;
             text-align: center;
         }
 
+        .child {
+            flex: 1 1 100%;
+            max-width: 100%;
+            align-items: center;
+        }
+
         .child h1 {
-            font-size: 32px;
+            font-size: 34px;
             margin-bottom: 20px;
         }
 
