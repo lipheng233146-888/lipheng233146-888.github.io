@@ -10,50 +10,50 @@
 
 <body>
 
-    <div class="container">
-        <div class="navbar">
+    <div class="header">
+        <div class="container">
             <div class="logo">
-                <img src="images/icon.png" alt="icon">
-                <span>Positivus</span>
-            </div>
-
-            <div class="nav-links">
-                <a href="#">About us</a>
-                <a href="#">Services</a>
-                <a href="#">Use Cases</a>
-                <a href="#">Pricing</a>
-                <a href="#">Blog</a>
-                <button class="btn-secondary">Request a quote</button>
-            </div>
-            <div class="menu-toggle" aria-label="Toggle Navigation Menu">
-                <img src="images/hamburger.jpg" alt="Menu" class="burger-icon">
+                <a href="" class="logo-icon">
+                    <img src="images/logo.svg" alt="icon">
+                </a>
+                <div class="nav-links">
+                    <a href="#" class="link">About us</a>
+                    <a href="#" class="link">Services</a>
+                    <a href="#" class="link">Use Cases</a>
+                    <a href="#" class="link">Pricing</a>
+                    <a href="#" class="link">Blog</a>
+                    <a href="#" class="btn">Request a quote</a>
+                    <a href="#" class="burger-icon">
+                        <img src="images/hamburger.jpg" alt="Menu">
+                    </a>
+                </div>
             </div>
         </div>
+    </div>
 
 
-
-        <div class="parent">
+    <div class="section">
+        <div class="container section-container">
             <div class="child">
-                <h1>Navigating the digital landscape for success</h1>
-                <p>Our digital marketing agency helps businesses grow and succeed online through a range of services
-                    including SEO, PPC, social media marketing, and content creation.</p>
-                <button class="btn-primary">Book a consultation</button>
+                <h1 class="title">Navigating the digital landscape for success</h1>
+                <h3 class="subtitle">Our digital marketing agency helps businesses grow and succeed online through a
+                    range of services
+                    including SEO, PPC, social media marketing, and content creation.</h3>
+                <a href="#" class="btn btn-secondary">Book a consultation</a>
             </div>
-            <div class="child-image">
-                <img src="images/Illustration.png" alt="Digital Landscape Illustration">
-            </div>
+            <img src="images/Illustration.svg" alt="Digital Landscape Illustration">
         </div>
     </div>
 
     <div class="brand">
         <div class="brand container">
             <div class="brand-logo">
-                <img src="images/amazon.png" alt="Amazon">
-                <img src="images/dribble.png" alt="Dribbble">
-                <img src="images/hubspot.png" alt="HubSpot">
-                <img src="images/notion.png" alt="Notion">
-                <img src="images/netflix.png" alt="Netflix">
-                <img src="images/zoom.png" alt="Zoom">
+                <a href="#" class="branding"><img src="images/amazon.svg" alt="Amazon"></a>
+                <a href="#" class="branding"><img src="images/dribbble.svg" alt="Dribbble"></a>
+                <a href="#" class="branding"><img src="images/hubspot.svg" alt="HubSpot"></a>
+                <a href="#" class="branding"><img src="images/notion.svg" alt="Notion"></a>
+                <a href="#" class="branding"><img src="images/netflix.svg" alt="Netflix"></a>
+                <a href="#" class="branding"><img src="images/zoom.svg" alt="Zoom"></a>
             </div>
         </div>
     </div>
@@ -201,12 +201,12 @@
 
     body {
         color: black;
-        background-color: white;
+        background-color: #f3f3f3;
         overflow-x: hidden;
         font-family: "Space Grotesk", sans-serif;
     }
 
-    .menu-toggle {
+    .nav-links .burger-icon {
         display: none;
         background: transparent;
         border: none;
@@ -215,418 +215,84 @@
         padding: 5px;
     }
 
-    .menu-toggle .burger-icon {
+    .burger-icon {
         width: 28px;
         height: 28px;
         display: block;
         object-fit: contain;
     }
 
-    .container {
-        width: 100%;
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0 20px;
+    .link {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        color: black;
     }
 
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 40px 0;
-        gap: 40px;
+    .container {
+        max-width: 1240px;
+        margin: auto;
+    }
+
+    .btn {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        text-align: center;
+        padding: 20px 35px;
+        border: 1px solid black;
+        border-radius: 14px;
+        color: black;
     }
 
     .logo {
         display: flex;
         align-items: center;
-        gap: 12px;
-        flex-shrink: 0;
-    }
-
-    .logo img {
-        width: 36px;
-        height: 36px;
-        object-fit: contain;
-    }
-
-    .logo span {
-        font-size: 32px;
-        font-weight: 700;
-        letter-spacing: -1px;
-        white-space: nowrap;
+        justify-content: space-between;
+        margin-top: 60px;
     }
 
     .nav-links {
         display: flex;
-        gap: 40px;
         align-items: center;
-    }
-
-    .nav-links a {
-        text-decoration: none;
-        color: black;
-        font-size: 20px;
-        font-weight: 400;
-        white-space: nowrap;
-        transition: color 0.2s ease, text-decoration 0.2s ease;
-    }
-
-    .nav-links a:hover {
-        color: #B9FF66;
-        text-decoration: underline;
-    }
-
-    .parent {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
         gap: 40px;
-        padding: 60px 0;
-        width: 100%;
     }
 
-    .child {
-        flex: 0 0 45%;
-        /* Flex-grow, flex-shrink, and a solid baseline width */
-        max-width: 530px;
+    .section-container {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        margin-top: 70px;
+        gap: 100px;
     }
 
-    .child h1 {
-        font-size: 60px;
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 35px;
-
-    }
-
-    .child p {
-        font-size: 20px;
-        line-height: 1.5;
-        margin-bottom: 35px;
-    }
-
-    .child-image {
-        flex: 0 0 50%;
-        display: flex;
-        max-width: 600px;
-        width: 100%;
-        justify-content: flex-end;
-    }
-
-    .child-image img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        flex-shrink: 0;
-        /* Prevents hero image from shrinking to 0% */
-    }
-
-    /* Buttons */
-    .btn-primary {
-        background-color: #191a23;
-        color: white;
-        padding: 20px 35px;
-        border-radius: 14px;
-        border: none;
-        font-size: 20px;
+    .title {
         font-weight: 500;
-        cursor: pointer;
-        transition: background 0.2s ease;
-        /* Smooth transition for hover effect */
+        font-size: 60px;
+        margin-bottom: 35px;
     }
 
-    .btn-primary:hover {
-        background-color: black;
+    .subtitle {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        margin-bottom: 55px;
     }
 
     .btn-secondary {
-        background-color: transparent;
-        color: #191a23;
-        padding: 20px 35px;
-        border-radius: 14px;
-        border: 1px solid #191a23;
-        font-size: 20px;
+        background-color: black;
         font-weight: 400;
-        cursor: pointer;
-        transition: background 0.2s ease;
-        /* Smooth transition for hover effect */
-    }
-
-    .btn-secondary:hover {
-        background-color: #f3f3f3;
-    }
-
-    .brand {
-        padding: 40px 0;
-        margin-bottom: 40px;
-        width: 100%;
+        line-height: 140%;
+        color: #f3f3f3;
     }
 
     .brand-logo {
         display: flex;
-        justify-content: space-between;
+        gap: 100px;
         align-items: center;
-        flex-wrap: wrap;
-        gap: 30px;
-        max-width: 1280px;
-        margin: 0 auto;
+        margin-top: 80px;
     }
 
-    .brand-logo img {
-        height: 30px;
-        object-fit: contain;
-        filter: grayscale(100%);
-        opacity: 0.8;
-    }
-
-    .services-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-top: 40px;
-        margin-bottom: 60px;
-    }
-
-    .services-header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin-bottom: 25px;
-    }
-
-    .services-title {
-        background-color: #B9FF66;
-        color: #191a23;
-        padding: 0 10px;
-        border-radius: 7px;
-        font-weight: 600;
-        font-size: 40px;
-        flex-shrink: 0;
-    }
-
-    .services-description {
-        font-size: 18px;
-        line-height: 1.5;
-        color: #191a23;
-        max-width: 580px;
-        margin-bottom: 60px;
-    }
-
-    .white {
-        background-color: #f3f3f3;
-    }
-
-    .green {
-        background-color: #B9FF66;
-    }
-
-    .dark {
-        background-color: #191a23;
-    }
-
-    .white .link,
-    .green .link {
-        color: #191a23;
-    }
-
-    .card.dark .link {
-        color: white;
-    }
-
-    .card .link:hover {
-        text-decoration: underline;
-    }
-
-    .card {
-        display: flex;
-        padding: 50px;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 45px;
-        border: 1px solid #191a23;
-        box-shadow: 0px 5px 0px #191a23;
-        overflow: hidden;
-        flex: 0 0 calc(50% - 20px);
-        max-width: calc(50% - 20px);
-        width: calc(50% - 20px);
-        /* Flex-grow, flex-shrink, and a solid baseline width */
-        box-sizing: border-box;
-    }
-
-    .cards-section {
-        display: flex;
-        align-items: stretch;
-        flex-wrap: wrap;
-        gap: 40px;
-        justify-content: flex-start;
-        width: 100%;
-    }
-
-    .header-link {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 40px;
-        flex: 1;
-        min-width: 0;
-    }
-
-    .heading {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .card .link .icon {
-        width: 41px;
-        height: 41px;
-        object-fit: contain;
-        flex-shrink: 0;
-    }
-
-    .text {
-        display: inline-block;
-        font-size: 26px;
-        font-weight: 500;
-        padding: 2px 8px;
-        border-radius: 7px;
-        width: fit-content;
-        max-height: 100%;
-    }
-
-    .card .link {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        text-decoration: none;
-        color: #191a23;
-        font-size: 20px;
-    }
-
-    .card .illustration {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 210px;
-        max-width: 40%;
-        min-width: 100px;
-        margin-left: 20px;
-        flex-shrink: 0;
-    }
-
-    .card .illustration img {
-        width: 100%;
-        height: auto;
-        max-height: 100%;
-        object-fit: contain;
-    }
-
-    .banner {
-        background-color: #f3f3f3;
-        border-radius: 45px;
-        align-items: center;
-        justify-content: space-between;
-        padding: 60px;
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        /*The element keeps its original space in the document layout. Surrounding elements do not move or shift to fill any gap.*/
-        max-width: 1280px;
-        margin: 0 auto;
-        position: relative;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
-    .content .banner-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex: 0 1 50%;
-        width: 50%;
-        max-width: 600px;
-        z-index: 3;
-        box-sizing: border-box;
-    }
-
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        z-index: 3;
-        box-sizing: border-box;
-    }
-
-    .content h3 {
-        font-size: 30px;
-        font-weight: 600;
-        margin-bottom: 20px;
-        width: 100%;
-    }
-
-    .content p {
-        font-size: 18px;
-        line-height: 1.5;
-        margin-bottom: 25px;
-    }
-
-    .cta-illustration {
-        display: block;
-        position: relative;
-        flex: 0 1 45%;
-        width: 45%;
-        height: 100%;
-        min-height: 250px;
-        box-sizing: border-box;
-    }
-
-    .cta-illustration img {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        width: 135%;
-        max-width: 450px;
-        height: auto;
-        max-height: 135%;
-        object-fit: contain;
-        transform: translateY(-50%) scale(1.15);
-        transform-origin: right center;
-        /* Scales inwards away from text to prevent clipping collisions */
-        z-index: 2;
-    }
-
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 60px 10px;
-        width: 100%;
-        margin-bottom: 80px;
-        box-sizing: border-box;
-    }
-
-    .banner-content {
-        width: 50%;
-        max-width: 600px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
-        z-index: 3;
-        box-sizing: border-box;
-    }
+    .branding {}
 
     @media screen and (max-width: 430px) {
         body {
