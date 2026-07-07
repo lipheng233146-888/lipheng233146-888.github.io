@@ -2,7 +2,16 @@
  @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css);
 
  * {
+     margin: 0%;
+     padding: 0;
      box-sizing: border-box;
+ }
+
+ :root {
+     --background: #1fd1ae;
+     --hr: #cccccc;
+     --light: white;
+     --dark: black;
  }
 
  body {
@@ -10,17 +19,16 @@
      min-height: 1080px;
      display: flex;
      flex-direction: column;
-     margin: 0;
      background-image: url(..//images/background.jpg);
      background-size: cover;
      background-position: center;
-     color: black;
+     color: var(--dark);
  }
 
  /* --- Header --- */
  header {
      background-color: #1fd1ae;
-     color: white;
+     color: var(--light);
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -35,7 +43,7 @@
 
  header .social-links a,
  footer .social-links a {
-     color: white;
+     color: var(--light);
      margin-left: 15px;
      text-decoration: none;
      font-size: 20px;
@@ -73,7 +81,7 @@
      display: flex;
      align-items: center;
      justify-content: center;
-     color: black;
+     color: var(--dark);
      font-size: 30px;
      overflow: hidden;
  }
@@ -92,13 +100,13 @@
 
  .profile-subtitle {
      font-size: 30px;
-     color: black;
+     color: var(--dark);
      margin-bottom: 20px;
  }
 
  .profile-bio {
      font-size: 20px;
-     color: black;
+     color: var(--dark);
      line-height: 1.5;
  }
 
@@ -115,7 +123,7 @@
 
 
  .card {
-     background: white;
+     background: var(--light);
      opacity: 65%;
      border-radius: 16px;
      padding: 25px;
@@ -140,7 +148,7 @@
 
  .card hr {
      border: none;
-     border-top: 1px solid #ccc;
+     border-top: 1px solid var(--hr);
      margin-bottom: 15px;
  }
 
@@ -154,13 +162,13 @@
  }
 
  .exercise-link:hover {
-     color: #1fd1ae;
+     color: var(--background);
  }
 
  /* --- Footer --- */
  footer {
-     background-color: #1fd1ae;
-     color: white;
+     background-color: var(--background);
+     color: var(--light);
      text-align: center;
      padding: 25px 20px;
      font-size: 15px;
