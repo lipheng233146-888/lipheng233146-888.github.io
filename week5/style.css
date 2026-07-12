@@ -1,86 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    color: black;
-    background-color: white;
-    overflow-x: hidden;
-    font-family: "Space Grotesk", sans-serif;
-}
-
 /* Fixed global alignment container */
 .container {
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-/* Navbar positioning configuration */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 0;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-shrink: 0;
-}
-
-.nav-links {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-.link-item {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-weight: 400;
-    transition: color 0.2s ease;
-}
-
-.link-item:hover {
-    color: #B9FF66;
-}
-
-.burger-icon {
-    width: 28px;
-    height: 28px;
-    display: none;
-}
-
-/* Button Layout Style */
-.btn,
-.btn-2 {
-    text-decoration: none;
-    color: black;
-    padding: 14px 30px;
-    border: 1px solid black;
-    border-radius: 14px;
-    font-size: 18px;
-    transition: all 0.2s ease;
-}
-
-.btn:hover {
-    background-color: #B9FF66;
-}
-
-.btn-2 {
-    background-color: #191A23;
-    color: white;
-}
-
-.btn-2:hover {
-    background-color: #f3f3f3;
-    color: black;
 }
 
 /* Desktop View Layout Configuration */
@@ -318,6 +242,32 @@ body {
     padding: 0 20px;
     box-sizing: border-box;
 
+}
+
+.case-section {
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.case-text {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.case-title {
+    font-weight: 500;
+    font-size: 40px;
+    border-radius: 7px;
+    padding: 0 7px;
+    background-color: #B9FF66;
+    max-width: fit-content;
+}
+
+.case-subtitle {
+    font-weight: 400;
+    font-size: 40px;
+    max-width: 580px;
 }
 
 
