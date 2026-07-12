@@ -1,10 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+.btn-2 {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 14px 30px;
+    border: 1px solid black;
+    border-radius: 14px;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
 
-/* Fixed global alignment container */
-.container {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 0 20px;
+.btn-2:hover {
+    background-color: #f3f3f3;
+    color: black;
+}
+
+.btn {
+    text-decoration: none;
+    color: black;
+    padding: 14px 30px;
+    border: 1px solid black;
+    border-radius: 14px;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #B9FF66;
 }
 
 /* Desktop View Layout Configuration */
@@ -26,8 +47,8 @@
 }
 
 .parent-title {
-    font-size: 56px;
-    font-weight: 600;
+    font-size: 60px;
+    font-weight: 500;
     line-height: 1.15;
     text-align: left;
 }
@@ -36,10 +57,10 @@
 .parent-description {
     font-size: 20px;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.4;
     color: #333333;
     text-align: left;
-    max-width: 480px;
+    max-width: 498px;
 }
 
 .illustration {
@@ -95,7 +116,7 @@
 .services-description {
     font-size: 18px;
     font-weight: 400;
-    max-width: 500px;
+    max-width: 580px;
     line-height: 1.5;
 }
 
@@ -107,7 +128,7 @@
 
 .card {
     flex: 1;
-    background-color: white;
+    background-color: #f3f3f3;
     border: 1px solid #191A23;
     border-radius: 30px;
     padding: 50px;
@@ -123,7 +144,7 @@
 
 .card3 {
     background-color: #191A23;
-    color: white;
+    color: #f3f3f3;
 }
 
 .card-left {
@@ -163,28 +184,6 @@
     max-width: 160px;
     height: auto;
     display: block;
-}
-
-.learn-btn {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.icon img {
-    width: 35px;
-    height: 35px;
-}
-
-.learn-text {
-    font-size: 18px;
-    color: black;
-}
-
-.learn-text-2 {
-    font-size: 18px;
-    color: white;
 }
 
 .left-block {
@@ -244,47 +243,17 @@
 
 }
 
-.case-section {
-    margin-top: 100px;
-    margin-bottom: 80px;
-}
-
-.case-text {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-}
-
-.case-title {
-    font-weight: 500;
-    font-size: 40px;
-    border-radius: 7px;
-    padding: 0 7px;
-    background-color: #B9FF66;
-    max-width: fit-content;
-}
-
-.case-subtitle {
-    font-weight: 400;
-    font-size: 40px;
-    max-width: 580px;
-}
-
 
 /* --- RESPONSIVE MEDIA BREAKPOINTS --- */
 @media screen and (max-width: 530px) {
-
-    .nav-links {
-        display: none;
-    }
-
-    .parent-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .burger-icon {
-        display: block;
+    .btn .btn-2 {
+        text-decoration: none;
+        color: white;
+        padding: 30px 0;
+        border: 1px solid black;
+        border-radius: 14px;
+        font-size: 20px;
+        transition: all 0.2s ease;
     }
 
     .left-side {
@@ -328,9 +297,9 @@
 
     .card {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 15px;
-        padding: 24px;
+        padding: 50px;
     }
 
     .card-left {
@@ -343,8 +312,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: flex-end;
-        width: 100%;
+        max-width: 210px;
     }
 
     .card-title,
@@ -362,23 +330,20 @@
 
     .cards {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 20px;
     }
 
     .element img {
-        width: 100px;
-        max-width: 576px;
-        height: auto;
+        width: 105px;
+        align-items: center;
         flex-shrink: 0;
     }
 
     .learn-btn {
         display: flex;
-        align-content: flex-start;
-        margin-top: 20px;
-        gap: 10px;
-        width: 100%;
+        flex-direction: row;
+        align-content: center;
     }
 
     .learn-text,
@@ -394,31 +359,27 @@
     .block {
         display: flex;
         flex-direction: column;
-        align-items: flex;
-        justify-content: center;
-        text-align: center;
-        padding: 40px 30px;
+        align-items: left;
+        padding: 40px 0;
         border-radius: 30px;
+        max-width: 530px;
         margin-top: 60px;
     }
 
     .left-block {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 100%;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .block-title {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
         flex-direction: column;
-        text-align: left;
     }
 
     .block-subtitle {
-        text-align: left;
+        max-width: 530px;
     }
 
     .block img {

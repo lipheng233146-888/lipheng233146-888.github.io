@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 * {
     box-sizing: border-box;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 body {
@@ -49,28 +57,43 @@ body {
     display: none;
 }
 
-/* Button Layout Style */
-.btn,
-.btn-2 {
-    text-decoration: none;
-    color: black;
-    padding: 14px 30px;
-    border: 1px solid black;
-    border-radius: 14px;
+.learn-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.icon img {
+    width: 35px;
+    height: 35px;
+}
+
+.learn-text {
     font-size: 18px;
-    transition: all 0.2s ease;
-}
-
-.btn:hover {
-    background-color: #B9FF66;
-}
-
-.btn-2 {
-    background-color: #191A23;
-    color: white;
-}
-
-.btn-2:hover {
-    background-color: #f3f3f3;
     color: black;
+}
+
+.learn-text-2 {
+    font-size: 18px;
+    color: #f3f3f3;
+}
+
+/* Button Layout Style */
+
+
+@media screen and (max-width: 530px) {
+    .nav-links {
+        display: none;
+    }
+
+    .parent-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .burger-icon {
+        display: block;
+    }
+
 }
