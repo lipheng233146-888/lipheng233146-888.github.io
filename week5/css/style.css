@@ -14,20 +14,6 @@
     color: black;
 }
 
-.btn {
-    text-decoration: none;
-    color: black;
-    padding: 14px 30px;
-    border: 1px solid black;
-    border-radius: 14px;
-    font-size: 18px;
-    transition: all 0.2s ease;
-}
-
-.btn:hover {
-    background-color: #B9FF66;
-}
-
 /* Desktop View Layout Configuration */
 .parent-container {
     display: flex;
