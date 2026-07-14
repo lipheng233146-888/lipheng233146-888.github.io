@@ -1,0 +1,8 @@
+ .container {
+     display: flex;
+     background: rgb(91, 76, 82);
+     gap: 20px;
+     justify-content: space-around;
+     align-items: flex-end;
+     height: 100px;
+ }

@@ -1,0 +1,97 @@
+body {
+    margin: 5px 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    position: relative;
+}
+
+.logo img {
+    width: 50%;
+    height: auto;
+    display: flex;
+}
+
+.hamburger {
+    width: 32px 32px;
+    display: none;
+}
+
+.hamburger img {
+    width: 32px;
+    display: block;
+}
+
+.container2 {
+    display: flex;
+    gap: 30px;
+    font-family: "Inter" sans-serif;
+    align-items: center;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.phone img {
+    width: 20px;
+    height: auto;
+}
+
+.phone .text {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact {
+    border-radius: 10px;
+    padding: 10px 15px;
+    background-color: orangered;
+    border: none;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+
+.container3 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=New+Rocker&family=Space+Grotesk:wght@300..700&display=swap');
+
+@media screen and (max-width: 780px) {
+    .container {
+        padding: 15px 30px;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .container2 {
+        display: none;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 580px) {
+    .container3 {
+        display: none;
+        flex-direction: column;
+    }
+}
