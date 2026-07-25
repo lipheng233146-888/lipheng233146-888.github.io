@@ -1,0 +1,121 @@
+/* Reset and General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --grey: #4d4d4d;
+    --lightgrey: #717171;
+    --light: #f7f5fa;
+    --white: #ffffff;
+    --button: #4caf4f;
+    --button-hover: #388e3c;
+    --border-radius: 8px;
+    --box-shadow: rgba(0, 0, 0, 0.06);
+}
+
+body {
+    background-color: var(--white);
+    color: var(--grey);
+    padding: 40px 20px;
+}
+
+/* Header Section */
+.blog-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.blog-header h1 {
+    font-size: 2.25rem;
+    color: var(--grey);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.blog-header p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--lightgrey);
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 14px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 calc(33.333% - 16px);
+}
+
+.image-wrapper {
+    width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    display: block;
+    object-fit: contain;
+    min-height: 500px;
+}
+
+.content-box {
+    position: relative;
+    top: -160px;
+    width: 70%;
+    background-color: var(--light);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0px 8px 16px var(--box-shadow);
+    margin-bottom: -250px;
+}
+
+.content-box h3 {
+    font-size: 16px;
+    color: var(--lightgrey);
+    line-height: 1.4;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+/* Readmore Link */
+.readmore {
+    display: inline;
+    color: var(--button);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.readmore:hover {
+    color: var(--button-hover);
+}
+
+/* Responsive Scaling via Flexbox */
+@media (max-width: 900px) {
+    .card {
+        flex: 0 1 calc(50% - 12px);
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 0 1 100%;
+    }
+}
