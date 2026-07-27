@@ -1,0 +1,172 @@
+:root {
+    --background-image: linear-gradient(135deg, #020024 0%, #090979 35%, #00d4ff 100%);
+    --dark: #1a1a1a;
+    --green: #ccff00;
+    --light-text: #7a7a7a;
+    --progress-bar: #f0f0f0;
+    --white: #ffffff;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--background-image);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    border-radius: 12px;
+}
+
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.card {
+    position: absolute;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+
+.card-top-right {
+    top: 40px;
+    right: -40px;
+    background-color: var(--white);
+    width: 220px;
+    padding: 20px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.percentage {
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--dark);
+}
+
+.arrow-icon {
+    background-color: var(--green);
+    color: var(--dark);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.progress-bar-container {
+    background-color: var(--progress-bar);
+    height: 6px;
+    border-radius: 3px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.progress-bar-fill {
+    background-color: var(--green);
+    height: 100%;
+    width: 87.2%;
+    border-radius: 3px;
+}
+
+.card-bottom-left {
+    bottom: 40px;
+    left: -40px;
+    background-color: var(--green);
+    width: 260px;
+    padding: 24px;
+}
+
+.experience-value {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: 10px;
+}
+
+.divider {
+    background-color: var(--dark);
+    height: 1px;
+    width: 70%;
+    margin: 16px 0;
+    opacity: 0.3;
+}
+
+.card-label {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--light-text);
+}
+
+.dark-text {
+    color: var(--dark);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        aspect-ratio: 6 / 5;
+        margin: 40px auto;
+    }
+
+    .card-top-right {
+        top: 20px;
+        right: -20px;
+        width: 180px;
+        padding: 14px;
+    }
+
+    .percentage {
+        font-size: 22px;
+    }
+
+    .card-bottom-left {
+        bottom: 20px;
+        left: -20px;
+        width: 200px;
+        padding: 16px;
+    }
+
+    .experience-value {
+        font-size: 32px;
+    }
+
+    .divider {
+        margin: 10px 0;
+    }
+}

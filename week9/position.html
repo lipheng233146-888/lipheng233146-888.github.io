@@ -1,43 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Position</title>
-    <style>
-        div.container {
-            position: relative;
-            width: 50%;
-            height: 200px;
-            border: 3px solid green;
-            margin: auto;
-        }
-
-        div.box-1 {
-            position: absolute;
-            top: 20px;
-            right: -80px;
-            width: 120px;
-            border: 3px solid red;
-        }
-
-        div.box-2 {
-            position: absolute;
-            bottom: 20px;
-            left: -80px;
-            width: 120px;
-            border: 3px solid red;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <link rel="stylesheet" href="css/position.css">
 </head>
 
 <body>
 
+    <div class="dashboard-container">
+        <div class="image-wrapper">
 
-    <div class="container">
-        <div class="box-1">First Box</div>
-        <div class="box-2">Second Box</div>
+            <img src="images/custom-img-11-copyright.jpg" alt="Executive talking on phone" class="main-image">
+
+            <div class="card card-top-right">
+                <div class="card-header">
+                    <span class="percentage">87.2%</span>
+                    <span class="arrow-icon">↑</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill"></div>
+                </div>
+                <p class="card-label">Revenue growth</p>
+            </div>
+
+            <div class="card card-bottom-left">
+                <div class="experience-value">20+</div>
+                <div class="divider"></div>
+                <p class="card-label dark-text">Years of experience</p>
+            </div>
+
+        </div>
     </div>
-
 
 </body>
 
