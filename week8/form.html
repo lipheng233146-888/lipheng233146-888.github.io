@@ -4,23 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle School Registration Form</title>
     <link rel="stylesheet" href="css/form.css">
-    <title>Form</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="form">
-            <header>
-                <a href="#" class="btn">One Player</a>
-                <a href="#" class="btn-secondary">Siblings</a>
-            </header>
 
-            <main>
-                <h1>Registration Form - Middle School</h1>
-            </main>
+    <div class="container">
+        <!-- Close Button -->
+        <button class="close-btn">&times;</button>
+
+        <!-- Top Mode Toggle -->
+        <div class="mode-toggle">
+            <button class="toggle-item">one player</button>
+            <button class="toggle-item active">siblings</button>
         </div>
+
+        <!-- Title -->
+        <h2 class="form-title">Registration Form - Middle School</h2>
+
+        <!-- Player Step Tabs -->
+        <div class="player-steps">
+            <div class="step-tab active">
+                <span class="dot"></span> player 1
+            </div>
+            <div class="step-tab disabled">
+                <span class="dot"></span> player 2
+            </div>
+            <div class="step-circle disabled"></div>
+        </div>
+
+
+        <form class="registration-form">
+            <div class="form-box">
+                <div class="input-group">
+                    <input type="text" id="first-name" value="Joseph" required>
+                    <label for="first-name">First name*</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="last-name" required>
+                    <label for="last-name">Last name*</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="grade-level" required>
+                    <label for="grade-level">Grade level*</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="school-attending" required>
+                    <label for="school-attending">School attending*</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="skill-level" required>
+                    <label for="skill-level">Skill level*</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="t-shirt-size" required>
+                    <label for="t-shirt-size">T-shirt size*</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email*</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="confirm-email" required>
+                    <label for="confirm-email">Confirm email*</label>
+                </div>
+
+                <div class="input-group full-width">
+                    <input type="tel" id="guardian-phone" required>
+                    <label for="guardian-phone">Guardian's phone number*</label>
+                </div>
+            </div>
+        </form>
+
+        <section class="footer">
+            <div class="price-info">
+                <div class="price-row">
+                    <span class="label">Price:</span>
+                    <span class="old-price">$380</span>
+                    <span class="current-price">$360</span>
+                    <span class="discount-tag">($20 off for siblings)</span>
+                </div>
+                <p class="instruction-text">Payment instruction will be sent by confirmation email</p>
+                <p class="terms-text">By clicking the Submit button you agree to our <a href="#">Privacy Policy
+                        Terms</a></p>
+            </div>
+
+            <button class="next-btn" disabled>Next player &rarr;</button>
+        </section>
     </div>
+
 </body>
 
 </html>
